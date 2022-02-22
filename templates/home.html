@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block title %}Домашняя страница{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if items %}
+        {% for i in items %}
+            <div class="card my-2">
+                <div class="card-header">
+                    <span class="fs-4">{{ i.name }}</span>
+                </div>
+                <div class="card-body">
+                    <p>{{ i.description }}</p>
+                    <a role="button" href="/item/{{ i.id }}" class="btn btn-outline-dark">Просмотреть</a>
+                </div>
+            </div>
+        {% endfor %}
+        {% else %}
+            <h3>Записей нет</h3>
+    {% endif %}
+</div>
+{% endblock %}

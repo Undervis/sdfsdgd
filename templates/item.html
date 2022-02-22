@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block title %}Элемент{% endblock %}
+
+{% block content %}
+    <div class="container m-4">
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.description }}</p>
+        <span class="me-2">Жанр: {{ item.genre }}</span>
+        <span>Возрастное ограничение: {{ item.age }}</span>
+    </div>
+{% endblock %}
